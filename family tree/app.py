@@ -9,22 +9,28 @@ app = Flask(__name__)
 @app.route("/")
 def home():
 
-    nome = "" # escreva seu nome
-    idade = "" # escreva sua idade
+    nome = "Arthur" # escreva seu nome
+    idade = "14" # escreva sua idade
 
     return render_template('index.html' , nome = nome , idade = idade)
 
 # defina a rota para a página do pai
+@app.route("/flask_2")
+def pai():
 
+    nome = "Marzo"
+    idade = "48" 
+
+    return render_template('pai.html' , nome = nome , idade = idade)
 
 # defina a rota para a página da mãe
+@app.route("/flask_3")
+def home():
 
+    nome = "Juliana" 
+    idade = "14" 
 
-# defina a rota para a página do amigo
-
-
-# adicione outras rotas, se você quiser
-
+    return render_template('mãe.html' , nome = nome , idade = idade)
 
 
 
